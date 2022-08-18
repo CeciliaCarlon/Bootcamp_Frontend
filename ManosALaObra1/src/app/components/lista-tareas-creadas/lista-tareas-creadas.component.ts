@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista-tareas-creadas',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ListaTareasCreadasComponent implements OnInit {
 
   constructor() { }
+
+  @Input() tarea = "";
 
   ngOnInit(): void {
   }

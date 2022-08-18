@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioTareasComponent implements OnInit {
 
+  //Variables
+  tarea1= "Hacer las compras";
+  tarea2= "Bañar al perro";
+  tarea3= "Preparar el budín";
+  tarea4= "Lavar el auto";
+
   constructor() { }
 
   ngOnInit(): void {

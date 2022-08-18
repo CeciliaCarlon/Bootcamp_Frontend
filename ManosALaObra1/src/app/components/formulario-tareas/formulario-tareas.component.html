@@ -1,10 +1,10 @@
 <div class="formTareas">
     <p class="titulo">Lista de Tareas de Cecilia</p>
     <app-agregar-tarea></app-agregar-tarea>
-    <app-lista-tareas-creadas></app-lista-tareas-creadas>
-    <app-lista-tareas-creadas></app-lista-tareas-creadas>
-    <app-lista-tareas-creadas></app-lista-tareas-creadas>
-    <app-lista-tareas-creadas></app-lista-tareas-creadas>
-    <app-lista-tareas-creadas></app-lista-tareas-creadas>
+    <app-lista-tareas-creadas [tarea]="tarea1"></app-lista-tareas-creadas>
+    <app-lista-tareas-creadas [tarea]="tarea2"></app-lista-tareas-creadas>
+    <app-lista-tareas-creadas [tarea]="tarea3"></app-lista-tareas-creadas>
+    <app-lista-tareas-creadas [tarea]="tarea4"></app-lista-tareas-creadas> <!-- Se trae una variable del TS y se muestra en el componente hijo -->
+    <app-lista-tareas-creadas [tarea]="'Comprar par de medias'"></app-lista-tareas-creadas> <!-- Se envía al componente hijo un string como "prop" -->
 </div>
 
