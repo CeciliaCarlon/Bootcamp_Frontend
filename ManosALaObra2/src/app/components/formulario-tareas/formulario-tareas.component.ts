@@ -17,7 +17,6 @@ export class FormularioTareasComponent implements OnInit {
   //Variables
   protected tareas: Array<any>;
   protected ID : number = 0;
-  protected index = 0;
 
   constructor() {
     this.tareas = new Array();
@@ -39,18 +38,15 @@ export class FormularioTareasComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  obtenerTarea(idTarea: number){
+  cambiarEstadoTarea($event : any) : void {
+    console.log($event.checked + " -> ANTES");
     this.tareas.forEach(tarea => {
-      if(tarea.id === idTarea) {
-        this.index = this.tareas.indexOf(tarea);
-        return tarea;
-      };
+      if(tarea.id === $event.id) $event.checked = !$event.checked;
     });
+    console.log($event.checked + " -> DESPUES");
   }
 
   agregarTarea(NOMBRE: string, CHECKED: boolean): void {
-    console.log(NOMBRE);
-    console.log(this.tareas.length);
     if(NOMBRE){
       this.ID = this.ID + 1;
       let nuevaTarea : EstructuraTarea ={
@@ -59,18 +55,18 @@ export class FormularioTareasComponent implements OnInit {
         checked : CHECKED,
       };
       this.tareas.unshift(nuevaTarea);
-      console.log(nuevaTarea.id);
     } else {
       alert("Debe insertar el nombre de la tarea");
     }
-    console.log(this.tareas.length);
   }
 
   eliminarTarea($event: any) : void {
-    console.log(this.tareas[$event.id]);
-    let tareaParaEliminar = this.obtenerTarea($event.id);    
-    delete this.tareas[this.index];
-    console.log(tareaParaEliminar);
+    for( let i = 0; i < this.tareas.length; i++){ 
+      if ( this.tareas[i].id === $event.id) { 
+        if(this.tareas[i].checked) this.tareas.splice(i, 1); 
+        else alert("La tarea debe estar completada");
+      } 
+    }
   }
   
 

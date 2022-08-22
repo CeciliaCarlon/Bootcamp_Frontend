@@ -20,10 +20,13 @@ export class ListaTareasCreadasComponent implements OnInit {
   }
 
   @Output() enviarTarea = new EventEmitter<Object>();
+  @Output() cambiarEstado = new EventEmitter<Object>();
 
   informarTareaEliminada(TAREA : Object) : void {
-    let tareaEliminada = TAREA;
-    this.enviarTarea.emit(tareaEliminada);
+    this.enviarTarea.emit(TAREA);
+  }
+  informarCambioEstado(TAREA : Object){
+    this.cambiarEstado.emit(TAREA);
   }
 
 }

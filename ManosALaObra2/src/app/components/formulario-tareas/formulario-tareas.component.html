@@ -5,7 +5,9 @@
         <button (click)="agregarTarea(nombreTarea.value, false)" class="btnAgregarTarea">ADD</button>
     </div>
     <div *ngFor="let t of tareas">
-        <app-lista-tareas-creadas (enviarTarea)="eliminarTarea($event)" [tarea]="t"></app-lista-tareas-creadas>
+        <app-lista-tareas-creadas (cambiarEstado)="cambiarEstadoTarea($event)" 
+                                  (enviarTarea)="eliminarTarea($event)" [tarea]="t">
+        </app-lista-tareas-creadas>
     </div>
     
     <!--
