@@ -1,8 +1,11 @@
 <div class="formTareas">
     <p class="titulo">Lista de Tareas de Cecilia</p>
-    <app-agregar-tarea></app-agregar-tarea>
+    <div class="formAgregarTarea">
+        <input class="inputAgregarTarea" type="text" #nombreTarea>
+        <button (click)="agregarTarea(nombreTarea.value, false)" class="btnAgregarTarea">ADD</button>
+    </div>
     <div *ngFor="let t of tareas">
-        <app-lista-tareas-creadas [tarea]="t.nombreTarea"></app-lista-tareas-creadas>
+        <app-lista-tareas-creadas (enviarTarea)="eliminarTarea($event)" [tarea]="t"></app-lista-tareas-creadas>
     </div>
     
     <!--

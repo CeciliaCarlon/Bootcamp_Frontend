@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-lista-tareas-creadas',
@@ -9,9 +9,21 @@ export class ListaTareasCreadasComponent implements OnInit {
 
   constructor() { }
 
-  @Input() tarea = "";
+  //Variables
+  @Input() tarea = {
+    id : 0,
+    nombreTarea : "",
+    checked : false,
+  };
 
   ngOnInit(): void {
+  }
+
+  @Output() enviarTarea = new EventEmitter<Object>();
+
+  informarTareaEliminada(TAREA : Object) : void {
+    let tareaEliminada = TAREA;
+    this.enviarTarea.emit(tareaEliminada);
   }
 
 }

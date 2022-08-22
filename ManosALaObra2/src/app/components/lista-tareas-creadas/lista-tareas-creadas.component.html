@@ -2,7 +2,9 @@
     <label class="container">
         <input type="checkbox">
         <span class="checkmark"></span>
-        <p class="tarea">{{tarea}}</p>
+        <p class="tarea">{{tarea.nombreTarea}}</p>
     </label>
-    <button><span class="material-symbols-outlined borrarTarea">delete</span></button>
+    <button (click)="informarTareaEliminada(tarea)">
+        <span class="material-symbols-outlined borrarTarea">delete</span>
+    </button>
 </div>
