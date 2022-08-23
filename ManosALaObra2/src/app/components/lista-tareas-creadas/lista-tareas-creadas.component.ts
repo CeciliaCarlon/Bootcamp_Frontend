@@ -9,7 +9,7 @@ export class ListaTareasCreadasComponent implements OnInit {
 
   constructor() { }
 
-  //Variables
+  //Lo que ingresa
   @Input() tarea = {
     id : 0,
     nombreTarea : "",
@@ -19,14 +19,12 @@ export class ListaTareasCreadasComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Lo que sale
   @Output() enviarTarea = new EventEmitter<Object>();
   @Output() cambiarEstado = new EventEmitter<Object>();
 
-  informarTareaEliminada(TAREA : Object) : void {
-    this.enviarTarea.emit(TAREA);
-  }
-  informarCambioEstado(TAREA : Object){
-    this.cambiarEstado.emit(TAREA);
-  }
+  //Funciones que emiten
+  informarTareaEliminada(TAREA : Object) : void { this.enviarTarea.emit(TAREA); }
+  informarCambioEstado(TAREA : Object){ this.cambiarEstado.emit(TAREA); }
 
 }

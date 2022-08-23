@@ -39,20 +39,18 @@ export class FormularioTareasComponent implements OnInit {
   }
 
   cambiarEstadoTarea($event : any) : void {
-    console.log($event.checked + " -> ANTES");
     this.tareas.forEach(tarea => {
       if(tarea.id === $event.id) $event.checked = !$event.checked;
     });
-    console.log($event.checked + " -> DESPUES");
   }
 
-  agregarTarea(NOMBRE: string, CHECKED: boolean): void {
+  agregarTarea(NOMBRE: string): void {
     if(NOMBRE){
       this.ID = this.ID + 1;
       let nuevaTarea : EstructuraTarea ={
         id: this.ID,
         nombreTarea : NOMBRE,
-        checked : CHECKED,
+        checked : false,
       };
       this.tareas.unshift(nuevaTarea);
     } else {
