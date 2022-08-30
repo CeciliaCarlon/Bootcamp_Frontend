@@ -1,0 +1,10 @@
+<div class="contendorTarea">
+    <label class="container">
+        <input (click)="informarCambioEstado(tarea)" type="checkbox">
+        <span class="checkmark"></span>
+        <p class="tarea">{{tarea.nombreTarea}}</p>
+    </label>
+    <button (click)="informarTareaEliminada(tarea)">
+        <span class="material-symbols-outlined borrarTarea">delete</span>
+    </button>
+</div>
