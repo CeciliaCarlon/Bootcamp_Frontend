@@ -8,19 +8,21 @@ input.inputAgregarTarea {
 } 
 button {
     all: unset;
-}
-button.btnAgregarTarea {
-    width: 110px;
-    height: 42px;
-    font-size: 16px;
-    text-align: center;
-    border: 2px solid black;
-    padding: 0;
-    background-color: white;
-    margin-left: 8px;
-}
-button.btnAgregarTarea:hover {
-    cursor: pointer;
+
+    &.btnAgregarTarea {
+        width: 110px;
+        height: 42px;
+        font-size: 16px;
+        text-align: center;
+        border: 2px solid black;
+        padding: 0;
+        background-color: white;
+        margin-left: 8px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
 }
 p.titulo {
     font-size: 30px;
