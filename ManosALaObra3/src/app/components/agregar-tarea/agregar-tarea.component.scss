@@ -1,29 +1,22 @@
+@import "../formulario-tareas/formulario-tareas.component.scss";
+
 div.formAgregarTarea {
-    margin-bottom: 25px;
+    width: 497px;
+    height: 64px;
+    background-color: $greyColor;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
-input.inputAgregarTarea {
-    width: 378px;
-    height: 40px;
-    border: 2px solid black;
-} 
-button {
+input {
     all: unset;
-
-    &.btnAgregarTarea {
-        width: 110px;
-        height: 42px;
-        font-size: 16px;
-        text-align: center;
-        border: 2px solid black;
-        padding: 0;
-        background-color: white;
-        margin-left: 8px;
-    }
-
-    &:hover {
-        cursor: pointer;
-    }
+    &.inputAgregarTarea {
+        width: 411px;
+        height: 48px;
+        padding: 8px;
+        border: 0;
+    } 
 }
-p.titulo {
-    font-size: 30px;
-}
+
+    

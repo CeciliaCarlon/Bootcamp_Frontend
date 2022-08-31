@@ -2,7 +2,12 @@
 
 //Variables
 $robotoFont: 'Roboto', sans-serif;
+$fontColorLight: #222222;
+$fontColorNight: #FFFFFF; 
+$greyColor: rgba(255, 255, 255, 0.1);
+$lightGreyColor: rgba(255, 255, 255, 0.2);
 
 main { 
     font-family: $robotoFont;
+    color: $fontColorNight;
 }

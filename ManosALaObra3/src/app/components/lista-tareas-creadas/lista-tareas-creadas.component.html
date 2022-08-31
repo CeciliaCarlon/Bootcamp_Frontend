@@ -1,10 +1,11 @@
 <div class="contendorTarea">
-    <label class="container">
-        <input (click)="informarCambioEstado(tarea)" type="checkbox">
-        <span class="checkmark"></span>
+    <div class="container checked" (click)="informarCambioEstado(tarea)">
+        <input class="checkbox" type="checkbox">
         <p class="tarea">{{tarea.nombreTarea}}</p>
-    </label>
-    <button (click)="informarTareaEliminada(tarea)">
-        <span class="material-symbols-outlined borrarTarea">delete</span>
-    </button>
+    </div>
+    <div class="btnContainer">
+        <button><mat-icon>share</mat-icon></button>
+        <button><mat-icon>assignment_turned_in</mat-icon></button>
+        <button (click)="informarTareaEliminada(tarea)"><mat-icon>delete_outline</mat-icon></button>
+    </div>    
 </div>

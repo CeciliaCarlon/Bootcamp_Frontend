@@ -1,4 +1,9 @@
 <div class="formAgregarTarea">
     <input class="inputAgregarTarea" type="text" #nombreTarea>
-    <button (click)="informarAgregarTarea(nombreTarea.value)" class="btnAgregarTarea">ADD</button>
+    <div>
+        <button (click)="informarAgregarTarea(nombreTarea.value)" class="btnAgregarTarea">
+            <mat-icon>check</mat-icon>
+        </button>
+    </div>
+    
 </div>
