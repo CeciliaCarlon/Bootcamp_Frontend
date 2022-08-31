@@ -1,7 +1,10 @@
 <div class="contendorTarea">
-    <div class="container checked" (click)="informarCambioEstado(tarea)">
-        <input class="checkbox" type="checkbox">
-        <p class="tarea">{{tarea.nombreTarea}}</p>
+    <div class="container checked">
+        <label class="container" (click)="informarCambioEstado(tarea)">
+            <input (click)="informarCambioEstado(tarea)" type="checkbox">
+            <span class="checkmark"></span>
+            <p class="tarea">{{tarea.nombreTarea}}</p>
+        </label>
     </div>
     <div class="btnContainer">
         <button><mat-icon>share</mat-icon></button>

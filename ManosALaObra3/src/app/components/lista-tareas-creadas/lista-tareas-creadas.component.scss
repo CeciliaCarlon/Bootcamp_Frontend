@@ -5,7 +5,7 @@ div {
         display: flex;
         justify-content: space-between;
         width: 481px;
-        height: 64px;
+        min-height: 64px;
         background: $lightGreyColor;
         border-radius: 4px;
         margin-bottom: 16px;
@@ -14,13 +14,48 @@ div {
     &.container {
         display: flex;
         align-items: center;
-        cursor: pointer;
-    }
-    &.checked {
-        text-decoration: line-through;
     }
     &.btnContainer {
         display: flex;
+    }
+}
+.checkmark {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border: 2px solid $fontColorNight;
+    align-self: center;
+    
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid $fontColorNight;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+}
+//Cuando se chequea el input
+.container input:checked {
+    & ~ .checkmark:after {
+        display: block;
+    } 
+    & ~ .tarea {
+        text-decoration: line-through;
+    }
+}
+label {
+    cursor: pointer;
+    display: flex;
+    
+    & .tarea {
+        margin-left: 32px;
     }
 }
 button {
@@ -28,11 +63,14 @@ button {
 }
 input {
     all: unset;
-    &.checkbox {
-        width: 24px;
-        height: 24px;
-        margin-right: 3px;
-        border: 2px solid $fontColorNight;
-        background-color: $lightGreyColor;
+}
+
+@media (max-width: 560px) {
+    div {
+        &.contendorTarea {
+            width: 382px;
+            min-height: 60px;
+        }
     }
 }
+

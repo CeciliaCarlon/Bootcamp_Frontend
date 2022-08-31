@@ -8,7 +8,6 @@ div.formTareas {
     flex-direction: column;
     align-items: center;
     margin: auto;
-    padding: 50px;
     width: 512px;
     height: auto;
 }
@@ -36,4 +35,16 @@ hr {
     border-radius: 4%;
     height: 0px;
     margin: 15px 0;
+}
+
+@media (max-width: 560px) {
+    hr {
+        width: 395px;
+    }
+    div.formTareas {
+        width: 414px;
+    }
+    .header {
+        width: 382px;
+    }
 }
