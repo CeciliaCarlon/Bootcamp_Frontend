@@ -1,7 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
-$backgroundColorNight: #222222;
+$negro: rgba(34, 34, 34, 1);
+$negro50: rgba(34, 34, 34, 0.5);
+$negro10: rgba(34, 34, 34, 0.1);
+
+$blanco: rgba(255, 255, 255, 1);
+$blanco50: rgba(255, 255, 255, 0.5);
+$blanco20: rgba(255, 255, 255, 0.2);
+$blanco10: rgba(255, 255, 255, 0.1);
 
 body {
-    background-color: $backgroundColorNight;
+    background-color: $blanco;
 }
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: $negro;
+    }
+}
+
+html {
+    all: unset !important;
+}
+
+

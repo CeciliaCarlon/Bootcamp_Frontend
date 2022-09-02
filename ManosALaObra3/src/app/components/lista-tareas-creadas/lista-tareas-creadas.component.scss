@@ -6,7 +6,7 @@ div {
         justify-content: space-between;
         width: 481px;
         min-height: 64px;
-        background: $lightGreyColor;
+        background: $negro10;
         border-radius: 4px;
         margin-bottom: 16px;
         padding: 0 8px;
@@ -23,7 +23,7 @@ div {
     position: absolute;
     height: 24px;
     width: 24px;
-    border: 2px solid $fontColorNight;
+    border: 2px solid $negro;
     align-self: center;
     
     &:after {
@@ -34,14 +34,14 @@ div {
         top: 5px;
         width: 5px;
         height: 10px;
-        border: solid $fontColorNight;
+        border: solid $negro;
         border-width: 0 3px 3px 0;
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 }
-//Cuando se chequea el input
+//Cuando se completa la tarea
 .container input:checked {
     & ~ .checkmark:after {
         display: block;
@@ -71,6 +71,15 @@ input {
             width: 382px;
             min-height: 60px;
         }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    div .contendorTarea {
+        background-color: $blanco20;
+    }
+    .checkmark {
+        border: 2px solid $blanco;
     }
 }
 

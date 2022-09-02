@@ -1,9 +1,14 @@
 <div class="formTareas">
     <div class="header">
         <p class="titulo">To do List</p>
-        <button><mat-icon>control_camera</mat-icon></button>
+        <div class="btnContainerHeader">
+            <button><mat-icon>control_camera</mat-icon></button>
+            <button type="checkbox" name="theme">
+                <span class="btnTheme">🌙</span>
+            </button>
+        </div>
     </div>
-    <app-agregar-tarea (nuevaTarea)="agregarTarea($event)"></app-agregar-tarea>
+    <app-agregar-tarea class="sticky" (nuevaTarea)="agregarTarea($event)"></app-agregar-tarea>
     <hr>
     <div *ngFor="let t of tareas">
         <app-lista-tareas-creadas (cambiarEstado)="cambiarEstadoTarea($event)" 
@@ -11,4 +16,5 @@
         </app-lista-tareas-creadas>
     </div>
 </div>
+
 

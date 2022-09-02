@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import "../styles.scss";
 
 //Variables
 $robotoFont: 'Roboto', sans-serif;
+/*
 $fontColorLight: #222222;
 $fontColorNight: #FFFFFF; 
 $greyColor: rgba(255, 255, 255, 0.1);
 $lightGreyColor: rgba(255, 255, 255, 0.2);
-
+*/
 main { 
     font-family: $robotoFont;
-    color: $fontColorNight;
+    color: $negro;
 }
+
+@media (prefers-color-scheme: dark) { 
+    main {
+        color: $blanco;
+    }
+}
+

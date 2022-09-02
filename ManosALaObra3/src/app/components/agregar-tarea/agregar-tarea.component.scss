@@ -2,12 +2,13 @@
 
 div.formAgregarTarea {
     width: 497px;
-    height: 64px;
-    background-color: $greyColor;
+    height: auto;
+    background-color: $negro10;
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    
 }
 input {
     all: unset;
@@ -27,6 +28,14 @@ input {
         width: 308px;
         padding: 8px;
     } 
+}
+
+@media (prefers-color-scheme: dark) {
+    .formAgregarTarea {
+        //Pongo el important porque me aparece esto como prioridad 
+        //html[native-dark-active] div.formAgregarTarea[_ngcontent-tda-c30]
+        background-color: $blanco20;
+    }
 }
 
     

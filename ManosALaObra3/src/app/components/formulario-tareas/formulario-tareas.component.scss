@@ -3,13 +3,25 @@
 p.titulo {
     font-size: 30px;
 }
-div.formTareas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 512px;
-    height: auto;
+div {
+    &.formTareas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: 512px;
+        height: auto;
+    }
+    &.btnContainerHeader{
+        display: flex;
+        width: 110px;
+        justify-content: space-between;
+    }
+}
+.sticky {
+    position: sticky;
+    top: 8%;
+    backdrop-filter: blur(5px) saturate(150%);;
 }
 .header {
     display: flex;
@@ -20,7 +32,7 @@ button {
     all: unset;
     width: 48px;
     height: 48px;
-    border: 1px solid #FFFFFF;
+    border: 1px solid $negro;
     border-radius: 4px;
     align-self: center;
     text-align: center;
@@ -28,9 +40,14 @@ button {
     &:hover {
         cursor: pointer;
     }
+
 }
+.btnTheme {
+    content: 🌞;
+}
+
 hr {
-    border: 1px solid $greyColor;
+    border: 1px solid $negro10;
     width: 497px;
     border-radius: 4%;
     height: 0px;
@@ -46,5 +63,14 @@ hr {
     }
     .header {
         width: 382px;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    hr {
+        border: 1px solid $blanco20;
+    }
+    button {
+        border: 1px solid $blanco;
     }
 }
